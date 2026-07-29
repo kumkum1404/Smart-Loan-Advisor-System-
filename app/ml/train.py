@@ -1,24 +1,19 @@
 import json
 import joblib
 import pandas as pd
-
 from pathlib import Path
-
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
-
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.svm import SVC
-
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
     recall_score,
     f1_score
 )
-
 from preprocessing import get_preprocessor
 
 
@@ -42,9 +37,7 @@ METRICS_PATH = BASE_DIR / "metrics.json"
 # -------------------------------
 
 print("Loading Dataset...")
-
 df = pd.read_csv(DATASET_PATH)
-
 print(df.head())
 
 
@@ -126,49 +119,28 @@ models = {
 
 
 best_model = None
-
 best_name = None
-
 best_accuracy = 0
-
 best_pipeline = None
-
 metrics = {}
-
-
 print("\nTraining Started...\n")
 
-
 for name, model in models.items():
-
     print(f"Training {name}...")
-
     pipeline = Pipeline(
-
         steps=[
-
             ("preprocessor", preprocessor),
-
             ("model", model)
-
         ]
-
     )
 
     pipeline.fit(X_train, y_train)
-
     prediction = pipeline.predict(X_test)
-
     accuracy = accuracy_score(y_test, prediction)
-
     precision = precision_score(
-
         y_test,
-
         prediction,
-
         pos_label="Approved"
-
     )
 
     recall = recall_score(

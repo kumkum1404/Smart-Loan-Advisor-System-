@@ -4,3 +4,4 @@ __pycache__/
 venv/
 instance/
 loan_prediction.db
+tempCodeRunnerFile.py

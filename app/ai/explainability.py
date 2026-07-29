@@ -17,6 +17,7 @@ def explain_prediction(data, prediction):
         reasons.append("Strong Monthly Income")
 
     elif data["Monthly_Income"] >= 30000:
+
         reasons.append("Average Monthly Income")
 
     else:
@@ -26,9 +27,6 @@ def explain_prediction(data, prediction):
 
     if data["Savings"] >= 200000:
         reasons.append("Healthy Savings")
-
-
-
     if data["Existing_EMI"] < data["Monthly_Income"]*0.25:
         reasons.append("Low Existing EMI")
 
@@ -40,12 +38,7 @@ def explain_prediction(data, prediction):
     else:
         status="Financial profile needs improvement."
 
-
-
     return {
-
         "status":status,
-
         "reasons":reasons
-
     }
