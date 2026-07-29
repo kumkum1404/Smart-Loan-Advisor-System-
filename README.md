@@ -276,7 +276,7 @@ https://github.com/kumkum1404/Smart-Loan-Advisor-System-
 
 ### Live Demo
 
-Deployment in Progress
+https://loansense-ai-fom6.onrender.com
 
 ---
 
