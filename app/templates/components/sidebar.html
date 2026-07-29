@@ -1,0 +1,103 @@
+<div class="sidebar">
+
+    <div class="logo">
+
+        <h3>LoanSense AI</h3>
+
+    </div>
+
+    <ul class="menu">
+
+         <li>
+        <a href="{{ url_for('home') }}" class="menu-link home-link">
+
+            <i class="bi bi-house-door"></i>
+
+            <span>Home</span>
+
+        </a>
+    </li>
+
+
+
+        <li>
+            <a href="{{ url_for('dashboard') }}" class="menu-link">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('planner') }}" class="menu-link">
+                <i class="bi bi-cash-stack"></i>
+                <span>Loan Planner</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('emi') }}" class="menu-link">
+            <!-- <a href="javascript:void(0)" 
+onclick="loadPage('{{ url_for('emi') }}')" 
+class="menu-link"> -->
+
+    <i class="bi bi-calculator"></i>
+    <span>EMI Calculator</span>
+
+</a>
+        </li>
+
+        <li>
+
+        <a href="{{ url_for('compare_banks') }}" class="menu-link">
+            <!-- <a href="#" onclick="loadPage('{{ url_for('compare_banks') }}')" class="menu-link"> -->
+                <i class="bi bi-bank"></i>
+                <span>Compare Banks</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('history') }}" class="menu-link">
+            <!-- <a href="#" onclick="loadPage('{{ url_for('history') }}')" class="menu-link"> -->
+                <i class="bi bi-clock-history"></i>
+                <span>Loan History</span>
+            </a>
+        </li>
+
+    
+        <li>
+            <a href="{{ url_for('profile') }}" class="menu-link">
+    
+                <i class="bi bi-person-circle"></i>
+                <span>My Profile</span>
+            </a>
+        </li>
+
+        <li>
+            <!-- <a href="{{ url_for('settings') }}" class="menu-link"> -->
+           <a href="{{ url_for('settings') }}" class="menu-link">
+                <i class="bi bi-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+
+        {% if current_user.role == "admin" %}
+
+        <li>
+            <a href="{{ url_for('admin') }}" class="menu-link">
+                <i class="bi bi-speedometer2"></i>
+                <span>Admin Panel</span>
+            </a>
+        </li>
+
+        {% endif %}
+
+        <li>
+            <a href="{{ url_for('logout') }}" class="menu-link">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Logout</span>
+            </a>
+        </li>
+
+    </ul>
+
+</div>

@@ -1,0 +1,2064 @@
+/* AI Financial Advisor */
+/* 
+.ai-card {
+
+    background: linear-gradient(135deg, #1E3A8A, #2563EB);
+
+    color: white;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(37, 99, 235, .25);
+
+    transition: .35s;
+
+}
+
+.ai-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.ai-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 36px;
+
+    background: rgba(255, 255, 255, .15);
+
+    backdrop-filter: blur(10px);
+
+}
+
+.ai-card h4 {
+
+    font-weight: 700;
+
+}
+
+.ai-card small {
+
+    color: #E0F2FE;
+
+}
+
+.ai-advice-message {
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, .12);
+
+    line-height: 1.9;
+
+    font-size: 16px;
+
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+/* .hero-section {
+
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    color: white;
+
+    margin-bottom: 35px;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .18);
+
+}
+
+.hero-badge {
+
+    background: rgba(255, 255, 255, .15);
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(8px);
+
+}
+
+.hero-title {
+
+    font-size: 48px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+
+}
+
+.hero-subtitle {
+
+    font-size: 18px;
+
+    opacity: .9;
+
+    max-width: 520px;
+
+}
+
+.confidence-circle {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.circle {
+
+    width: 170px;
+
+    height: 170px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    color: #2563eb;
+
+    border: 10px solid rgba(255, 255, 255, .3);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+
+    transition: .4s;
+
+}
+
+.circle:hover {
+
+    transform: scale(1.05);
+
+} */
+
+/* ==========================
+OVERVIEW CARDS
+========================== */
+
+/* .overview-card {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+    height: 100%;
+
+}
+
+.overview-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.overview-card .icon {
+
+    font-size: 34px;
+
+    margin-bottom: 15px;
+
+}
+
+.overview-card h6 {
+
+    color: #64748b;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+
+}
+
+.overview-card h3 {
+
+    font-weight: 700;
+
+}
+
+/* SECTION TITLE */
+
+/* .section-title {
+
+    margin-bottom: 20px;
+
+}
+
+.section-title h3 {
+
+    font-weight: 700;
+
+    color: #1E293B;
+
+} */ */
+
+/* FINANCE CARD */
+
+/* .finance-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+}
+
+.finance-card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+.finance-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 20px;
+
+    background: #EFF6FF;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 32px;
+
+}
+
+/* ANALYSIS */
+
+/* .analysis-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+.progress {
+
+    height: 14px;
+
+    border-radius: 20px;
+
+    background: #E2E8F0;
+
+}
+
+.progress-bar {
+
+    background: linear-gradient(90deg, #2563EB, #3B82F6);
+
+    border-radius: 20px;
+
+} */ */
+
+/* =============================
+
+AI CARD
+
+============================= */
+
+/* .ai-glass-card {
+
+    background: linear-gradient(135deg, #1E3A8A, #2563EB);
+
+    padding: 40px;
+
+    border-radius: 28px;
+
+    color: white;
+
+    box-shadow: 0 20px 45px rgba(37, 99, 235, .25);
+
+}
+
+.robot {
+
+    width: 120px;
+
+    height: 120px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 55px;
+
+    margin: auto;
+
+    color: #2563EB;
+
+}
+
+.ai-badge {
+
+    background: rgba(255, 255, 255, .18);
+
+    padding: 8px 20px;
+
+    border-radius: 25px;
+
+}
+
+.ai-response {
+
+    background: rgba(255, 255, 255, .12);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    line-height: 1.9;
+
+} */
+
+/* =============================
+
+FINANCIAL HEALTH
+
+============================= */
+
+/* .health-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+.health-score {
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: #EFF6FF;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #2563EB;
+
+    margin: auto;
+
+}
+
+.health-progress {
+
+    height: 15px;
+
+    background: #E2E8F0;
+
+    border-radius: 20px;
+
+    margin-top: 25px;
+
+}
+
+.health-fill {
+
+    height: 100%;
+
+    background: linear-gradient(90deg, #2563EB, #3B82F6);
+
+    border-radius: 20px;
+
+} */
+
+/* =============================
+
+BANK CARD
+
+============================= */
+/* 
+.bank-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+    transition: .35s;
+
+    height: 100%;
+
+}
+
+.bank-card:hover {
+
+    transform: translateY(-8px);
+
+} */
+
+/* =========================
+BACKGROUND
+========================= */
+/* 
+body {
+
+    background: #F8FAFC;
+
+}
+
+.bg-circle {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    z-index: -1;
+
+}
+
+.bg-circle-1 {
+
+    width: 320px;
+
+    height: 320px;
+
+    background: #DBEAFE;
+
+    top: -100px;
+
+    left: -100px;
+
+}
+
+.bg-circle-2 {
+
+    width: 260px;
+
+    height: 260px;
+
+    background: #BFDBFE;
+
+    right: -80px;
+
+    top: 220px;
+
+}
+
+.bg-circle-3 {
+
+    width: 240px;
+
+    height: 240px;
+
+    background: #E0F2FE;
+
+    bottom: -80px;
+
+    left: 40%;
+
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+/* .action-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+}
+
+.action-btn {
+
+    padding: 15px 35px;
+
+    border-radius: 14px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+.action-btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+
+} */
+
+/* =======================
+
+AI CHAT PANEL
+
+======================= */
+/* 
+.chat-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #eee;
+
+    background: white;
+
+}
+
+
+ 
+
+.chat-input input {
+
+    flex: 1;
+
+    border: none;
+
+    background: #f3f4f6;
+
+    padding: 13px 18px;
+
+    border-radius: 30px;
+
+    outline: none;
+
+}
+
+.chat-input button {
+
+    border: none;
+
+    background: none;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+} */ */
+
+/* =========================
+APPROVED
+========================= */
+
+/* .approved-banner {
+
+    background: linear-gradient(90deg, #22C55E, #16A34A);
+
+    color: white;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    margin: 20px 0; */
+
+    /* text-align: center;
+
+    font-weight: 600;
+
+    animation: fadeIn .8s ease;
+
+}
+
+/* =========================
+ANIMATION
+========================= */
+
+/* .card {
+
+    animation: fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+} */ */
+
+/* =========================
+RESPONSIVE
+========================= */
+
+/* @media(max-width:768px) {
+
+    .hero-title {
+
+        font-size: 34px;
+
+    }
+
+    .circle {
+
+        width: 130px;
+
+        height: 130px;
+
+        font-size: 28px;
+
+    }
+
+    .health-score {
+
+        width: 120px;
+
+        height: 120px;
+
+        font-size: 30px;
+
+    }
+
+    .action-buttons {
+
+        flex-direction: column;
+
+    }
+
+    .action-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+.result-status {
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+}
+
+.confidence {
+
+    font-size: 32px;
+
+}
+
+.risk {
+
+    font-size: 26px;
+
+}
+
+/* ===============================
+
+WORKSPACE
+
+=============================== */
+
+/* .result-layout {
+
+    display: flex;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+}
+#reportPanel {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    transition: .2s;
+
+}
+
+#reportPanel.shrink {
+
+    flex: 1;
+
+}
+
+.chat-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #ECECEC;
+
+    background: #fff;
+
+}
+
+.chat-top h5 {
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin: 0;
+
+}
+
+.chat-top small {
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+#closeChat {
+
+    background: none;
+
+    border: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    color: #666;
+
+}
+
+#chatMessages {
+
+    background: #FAFAFA;
+
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+
+}
+
+.ai-message {
+
+    background: white;
+
+    border: 1px solid #ECECEC;
+
+    padding: 15px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .05);
+
+    max-width: 90%;
+
+}
+
+.user-message {
+
+    background: #EEF7FF;
+
+    padding: 15px;
+
+    border-radius: 16px;
+
+    margin-left: auto;
+
+    max-width: 90%;
+
+}
+
+.chat-input {
+
+    padding: 15px;
+
+    border-top: 1px solid #eee;
+
+    background: white;
+    display: flex;
+    gap: 10px;
+
+}
+
+.chat-input button {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 15px;
+
+    font-size: 18px;
+
+}
+
+.assistant-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+.assistant-avatar {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+
+}
+
+.typing {
+
+    display: flex;
+
+    gap: 6px;
+
+    padding: 14px;
+
+    width: 65px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+.typing span {
+
+    width: 8px;
+
+    height: 8px;
+
+    background: #999;
+
+    border-radius: 50%;
+
+    animation: blink 1.2s infinite;
+
+}
+
+.typing span:nth-child(2) {
+
+    animation-delay: .2s;
+
+}
+
+.typing span:nth-child(3) {
+
+    animation-delay: .4s;
+
+}
+
+@keyframes blink {
+
+    0% {
+
+        opacity: .3;
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: translateY(-5px);
+
+    }
+
+    100% {
+
+        opacity: .3;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.quick-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+}
+
+.quick-actions button {
+
+    border: none;
+
+    background: #EEF4FF;
+
+    padding: 10px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.quick-actions button:hover {
+
+    background: #2563EB;
+
+    color: white;
+
+}
+
+#micButton {
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #f4f4f4;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    transition: .3s;
+
+}
+
+#micButton:hover {
+
+    background: #2563EB;
+
+    color: white;
+
+}
+
+#workspace {
+
+    display: flex;
+
+    width: 100%;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+#reportPanel {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    transition: .2s;
+
+}
+
+#chatPanel {
+
+    width: 0;
+
+    min-width: 0;
+
+    transition: .25s;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow:
+
+        -10px 0 25px rgba(0, 0, 0, .08);
+
+}
+
+#chatPanel.active {
+
+    width: 430px;
+
+    min-width: 430px;
+
+}
+
+#divider {
+
+    width: 6px;
+
+    display: none;
+
+    cursor: col-resize;
+
+    background: #f1f5f9;
+
+}
+
+#divider:hover {
+
+    background: #2563eb;
+
+}
+
+#chatPanel.active+#divider {
+
+    display: block;
+
+} */ */
+
+/* =========================
+   Tablet
+========================= */
+
+/* @media (max-width:992px) {
+
+    #chatPanel.active {
+
+        width: 380px;
+
+        min-width: 380px;
+
+    }
+
+} */
+
+/* =========================
+   Mobile
+========================= */
+/* 
+@media (max-width:768px) {
+
+    #workspace {
+
+        display: block;
+
+    }
+
+    #reportPanel {
+
+        width: 100%;
+
+    }
+
+    #divider {
+
+        display: none !important;
+
+    }
+
+    #chatPanel {
+
+        position: fixed;
+
+        top: 0;
+
+        right: -100%;
+
+        width: 100%;
+
+        height: 100vh;
+
+        z-index: 9999;
+
+        transition: .35s;
+
+    }
+
+    #chatPanel.active {
+
+        right: 0;
+
+        width: 100%;
+
+        min-width: 100%;
+
+    }
+
+}  */
+
+/* =====================================================
+   AI FINANCIAL ADVISOR
+===================================================== */
+
+.ai-card{
+    background:linear-gradient(135deg,#1E3A8A,#2563EB);
+    color:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(37,99,235,.25);
+    transition:.35s;
+}
+
+.ai-card:hover{
+    transform:translateY(-5px);
+}
+
+.ai-icon{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:36px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+}
+
+.ai-card h4{
+    font-weight:700;
+}
+
+.ai-card small{
+    color:#E0F2FE;
+}
+
+.ai-response{
+    margin-top:20px;
+    padding:22px;
+    border-radius:16px;
+    background:rgba(255,255,255,.12);
+    line-height:1.9;
+    font-size:16px;
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero-section{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    border-radius:25px;
+    padding:45px;
+    color:#fff;
+    margin-bottom:35px;
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+.hero-badge{
+    background:rgba(255,255,255,.15);
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    display:inline-block;
+    margin-bottom:20px;
+    backdrop-filter:blur(8px);
+}
+
+.hero-title{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.hero-subtitle{
+    font-size:18px;
+    opacity:.9;
+    max-width:520px;
+}
+
+
+/* =====================================================
+   CONFIDENCE CIRCLE
+===================================================== */
+
+.confidence-circle{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.circle{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    font-weight:700;
+    color:#2563EB;
+    border:10px solid rgba(255,255,255,.3);
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    transition:.4s;
+}
+
+.circle:hover{
+    transform:scale(1.05);
+}
+
+
+/* =====================================================
+   OVERVIEW CARDS
+===================================================== */
+
+.overview-card{
+    background:#fff;
+    border-radius:22px;
+    padding:28px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+    height:100%;
+}
+
+.overview-card:hover{
+    transform:translateY(-8px);
+}
+
+.overview-card .icon{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.overview-card h6{
+    color:#64748b;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.overview-card h3{
+    font-weight:700;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title{
+    margin-bottom:20px;
+}
+
+.section-title h3{
+    font-weight:700;
+    color:#1E293B;
+}
+
+
+/* =====================================================
+   FINANCE CARD
+===================================================== */
+
+.finance-card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.finance-card:hover{
+    transform:translateY(-6px);
+}
+
+.finance-icon{
+    width:70px;
+    height:70px;
+    border-radius:20px;
+    background:#EFF6FF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+}
+
+
+/* =====================================================
+   ANALYSIS
+===================================================== */
+
+.analysis-card{
+    background:#fff;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.progress{
+    height:14px;
+    border-radius:20px;
+    background:#E2E8F0;
+}
+
+.progress-bar{
+    background:linear-gradient(90deg,#2563EB,#3B82F6);
+    border-radius:20px;
+}
+
+
+/* =====================================================
+   AI GLASS CARD
+===================================================== */
+
+.ai-glass-card{
+    background:linear-gradient(135deg,#1E3A8A,#2563EB);
+    padding:40px;
+    border-radius:28px;
+    color:#fff;
+    box-shadow:0 20px 45px rgba(37,99,235,.25);
+}
+
+.robot{
+    width:120px;
+    height:120px;
+    background:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+    margin:auto;
+    color:#2563EB;
+}
+
+.ai-badge{
+    background:rgba(255,255,255,.18);
+    padding:8px 20px;
+    border-radius:25px;
+}
+
+
+/* =====================================================
+   HEALTH CARD
+===================================================== */
+
+.health-card{
+    background:#fff;
+    padding:35px;
+    border-radius:24px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.health-score{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:#EFF6FF;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:38px;
+    font-weight:bold;
+    color:#2563EB;
+    margin:auto;
+}
+
+.health-progress{
+    height:15px;
+    background:#E2E8F0;
+    border-radius:20px;
+    margin-top:25px;
+}
+
+.health-fill{
+    height:100%;
+    background:linear-gradient(90deg,#2563EB,#3B82F6);
+    border-radius:20px;
+}
+
+
+/* =====================================================
+   BANK CARD
+===================================================== */
+
+.bank-card{
+    background:#fff;
+    padding:30px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s;
+    height:100%;
+}
+
+.bank-card:hover{
+    transform:translateY(-8px);
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+body{
+    background:#F8FAFC;
+}
+
+.bg-circle{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(90px);
+    z-index:-1;
+}
+
+.bg-circle-1{
+    width:320px;
+    height:320px;
+    background:#DBEAFE;
+    top:-100px;
+    left:-100px;
+}
+
+.bg-circle-2{
+    width:260px;
+    height:260px;
+    background:#BFDBFE;
+    right:-80px;
+    top:220px;
+}
+
+.bg-circle-3{
+    width:240px;
+    height:240px;
+    background:#E0F2FE;
+    bottom:-80px;
+    left:40%;
+}
+
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.action-btn{
+    padding:15px 35px;
+    border-radius:14px;
+    font-size:17px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.action-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+
+/* =====================================================
+   RESULT TEXT
+===================================================== */
+
+.result-status{
+    font-size:34px;
+    font-weight:700;
+}
+
+.confidence{
+    font-size:32px;
+}
+
+.risk{
+    font-size:26px;
+}
+
+
+/* =====================================================
+   APPROVED BANNER
+===================================================== */
+
+.approved-banner{
+    background:linear-gradient(90deg,#22C55E,#16A34A);
+    color:#fff;
+    padding:18px;
+    border-radius:16px;
+    margin:20px 0;
+    text-align:center;
+    font-weight:600;
+    animation:fadeIn .8s ease;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+.card{
+    animation:fadeUp .7s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:768px){
+
+    .hero-title{
+        font-size:34px;
+    }
+
+    .circle{
+        width:130px;
+        height:130px;
+        font-size:28px;
+    }
+
+    .health-score{
+        width:120px;
+        height:120px;
+        font-size:30px;
+    }
+
+    .action-buttons{
+        flex-direction:column;
+    }
+
+    .action-btn{
+        width:100%;
+    }
+
+}
+
+/* =====================================================
+   AI CHAT PANEL
+===================================================== */
+
+.chat-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 22px;
+    border-bottom:1px solid #eee;
+    background:#fff;
+}
+
+.chat-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 22px;
+    border-bottom:1px solid #ECECEC;
+    background:#fff;
+}
+
+.chat-top h5{
+    font-size:18px;
+    font-weight:700;
+    margin:0;
+}
+
+.chat-top small{
+    color:#777;
+    font-size:13px;
+}
+
+/* =====================================================
+   Assistant
+===================================================== */
+
+.assistant-info{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.assistant-avatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#2563EB;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+}
+
+/* =====================================================
+   Close Button
+===================================================== */
+
+#closeChat{
+    background:none;
+    border:none;
+    font-size:24px;
+    cursor:pointer;
+    color:#666;
+}
+
+/* =====================================================
+   Chat Messages
+===================================================== */
+
+#chatMessages{
+    flex:1;
+    overflow-y:auto;
+    padding:20px;
+    background:#FAFAFA;
+}
+
+/* =====================================================
+   AI Message
+===================================================== */
+
+.ai-message{
+    background:#fff;
+    border:1px solid #ECECEC;
+    border-radius:16px;
+    padding:15px;
+    margin-bottom:18px;
+    max-width:90%;
+    box-shadow:0 3px 10px rgba(0,0,0,.05);
+}
+
+/* =====================================================
+   User Message
+===================================================== */
+
+.user-message{
+    background:#EEF7FF;
+    border-radius:16px;
+    padding:15px;
+    margin-left:auto;
+    margin-bottom:18px;
+    max-width:90%;
+}
+
+/* =====================================================
+   Typing Animation
+===================================================== */
+
+.typing{
+    display:flex;
+    gap:6px;
+    padding:14px;
+    width:65px;
+    background:#fff;
+    border-radius:14px;
+    margin-bottom:15px;
+}
+
+.typing span{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#999;
+    animation:blink 1.2s infinite;
+}
+
+.typing span:nth-child(2){
+    animation-delay:.2s;
+}
+
+.typing span:nth-child(3){
+    animation-delay:.4s;
+}
+
+@keyframes blink{
+
+    0%{
+        opacity:.3;
+        transform:translateY(0);
+    }
+
+    50%{
+        opacity:1;
+        transform:translateY(-5px);
+    }
+
+    100%{
+        opacity:.3;
+        transform:translateY(0);
+    }
+
+}
+
+/* =====================================================
+   Chat Input
+===================================================== */
+
+.chat-input{
+    display:flex;
+    gap:10px;
+    padding:15px;
+    border-top:1px solid #eee;
+    background:#fff;
+}
+
+.chat-input input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:#f3f4f6;
+    border-radius:30px;
+    padding:13px 18px;
+}
+
+.chat-input button{
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:15px;
+    background:none;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* =====================================================
+   Quick Actions
+===================================================== */
+
+.quick-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
+
+.quick-actions button{
+    border:none;
+    background:#EEF4FF;
+    padding:10px 14px;
+    border-radius:30px;
+    font-size:13px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.quick-actions button:hover{
+    background:#2563EB;
+    color:#fff;
+}
+
+/* =====================================================
+   Microphone
+===================================================== */
+
+#micButton{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:#f4f4f4;
+    cursor:pointer;
+    font-size:20px;
+    transition:.3s;
+}
+
+#micButton:hover{
+    background:#2563EB;
+    color:#fff;
+}
+
+/* =====================================================
+   WORKSPACE LAYOUT
+===================================================== */
+
+#workspace{
+    display:flex;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.result-layout{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+}
+
+/* =====================================================
+   REPORT PANEL
+===================================================== */
+
+#reportPanel{
+    flex:1;
+    overflow-y:auto;
+    transition:.25Ss;
+}
+
+#reportPanel.shrink{S
+    flex: 1;
+}
+
+/* =====================================================
+   CHAT PANEL
+===================================================== */
+
+#chatPanel{
+    width:0;
+    min-width:0;
+    flex:0;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:.25s;
+    background:#fff;
+    box-shadow:-10px 0 25px rgba(0,0,0,.08);
+}
+
+#chatPanel.active{
+    width:430px;
+    flex:0 0 430px;
+    min-width:430px;
+}
+
+/* =====================================================
+   RESIZE DIVIDER
+===================================================== */
+
+#divider{
+    width:6px;
+    display:none;
+    cursor:col-resize;
+    background:#f1f5f9;
+    transition:.1Ss;
+}
+
+
+#divider:hover{
+    background:#2563EB;
+}
+
+#divider.active{
+    display:block;
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width:992px){
+
+    #chatPanel.active{
+        width:380px;
+        min-width:380px;
+    }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:768px){
+
+    #workspace{
+        display:block;
+    }
+
+    #reportPanel{
+        width:100%;
+    }
+
+    #divider{
+        display:none !important;
+    }
+
+    #chatPanel{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:100%;
+        height:100vh;
+        z-index:9999;
+        transition:.35s;
+    }
+
+    #chatPanel.active{
+        right:0;
+        width:100%;
+        min-width:100%;
+    }
+
+}

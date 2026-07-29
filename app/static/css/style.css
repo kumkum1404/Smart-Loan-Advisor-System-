@@ -1,0 +1,73 @@
+@import url("variables.css");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+.card-custom{
+
+    background:var(--surface);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    border:none;
+
+    border-radius:12px;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+.flash-container{
+
+    position:fixed;
+
+    top:20px;
+
+    right:25px;
+
+    z-index:9999;
+
+}
+
+
+.flash-message{
+
+    min-width:300px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    border-radius:12px;
+
+}

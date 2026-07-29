@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}
+Compare Banks
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/compare_banks.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="bank-page">
+
+    {% include "components/sidebar.html" %}
+
+    <div class="bank-content">
+
+        {% include "components/topbar.html" %}
+
+
+        
+
+            <div class="container mt-0">
+
+                <div class="compare-card">
+
+                    <h2 class="compare-title">
+                        Compare Loan Interest Rates
+                    </h2>
+
+                    <div class="table-wrapper">
+
+
+
+                        <table class="bank-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Bank</th>
+                                    <th>Interest Rate</th>
+                                    <th>Processing Fee</th>
+                                    <th>Loan Tenure</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {% for bank in banks %}
+
+                                <tr>
+                                    <td>{{ bank.name }}</td>
+                                    <td>{{ bank.rate }}%</td>
+                                    <td>{{ bank.fee }}</td>
+                                    <td>{{ bank.tenure }} Years</td>
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- AI Recommended Bank -->
+
+                    <div class="ai-bank-card">
+
+                        <div class="card-body p-4">
+
+                            <div class="row align-items-center">
+
+                                <div class="col-md-2 text-center">
+
+                                    <div class="bank-icon">
+
+                                        🏦
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-7">
+
+                                    <span class="badge bg-success mb-2">
+
+                                        ⭐ AI Recommended
+
+                                    </span>
+
+                                    <h2>
+
+                                        {{ best_bank.name }}
+
+                                    </h2>
+
+                                    <p class="text-muted">
+
+                                        Based on lowest interest rate, loan tenure,
+                                        and better approval chances.
+
+                                    </p>
+
+                                </div>
+
+                                <div class="col-md-3 text-center">
+
+                                    <h1 class="text-primary">
+
+                                        {{ best_bank.rate }}%
+
+                                    </h1>
+
+                                    <small>
+
+                                        Starting Interest Rate
+
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+
+</div>
+
+{% endblock %}

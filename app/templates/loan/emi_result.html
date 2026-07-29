@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+EMI Result
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/emi.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg p-5">
+
+        <h2>EMI Calculation Result</h2>
+
+        <table class="table mt-4">
+
+            <tr>
+                <th>Monthly EMI</th>
+                <td>₹ {{ emi }}</td>
+            </tr>
+
+            <tr>
+                <th>Total Interest</th>
+                <td>₹ {{ total_interest }}</td>
+            </tr>
+
+            <tr>
+                <th>Total Payment</th>
+                <td>₹ {{ total_payment }}</td>
+            </tr>
+
+        </table>
+
+        <a href="/emi" class="btn btn-primary">
+
+            Calculate Again
+
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

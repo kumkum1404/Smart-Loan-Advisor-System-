@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+My Profile
+{% endblock %}
+
+
+{% block css %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+<div class="profile-page">
+
+
+    {% include "components/sidebar.html" %}
+
+
+
+    <div class="profile-content">
+
+
+
+        {% include "components/topbar.html" %}
+
+
+
+
+        <div class="profile-container">
+
+
+
+            <!-- Profile Header -->
+
+
+            <div class="profile-card">
+
+
+
+                <div class="profile-banner">
+
+
+                    <div class="profile-avatar">
+
+                        <i class="bi bi-person-fill"></i>
+
+                    </div>
+
+
+                    <div class="profile-title">
+
+                        <h2>
+                            {{ current_user.full_name }}
+                        </h2>
+
+
+                        <span class="role-badge">
+
+                            {{ current_user.role }}
+
+                        </span>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+                <!-- Details -->
+
+
+                <div class="profile-details">
+
+
+
+                    <div class="detail-box">
+
+                        <i class="bi bi-person"></i>
+
+                        <div>
+
+                            <small>
+                                Full Name
+                            </small>
+
+                            <h5>
+                                {{ current_user.full_name }}
+                            </h5>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="detail-box">
+
+
+                        <i class="bi bi-envelope"></i>
+
+
+                        <div>
+
+                            <small>
+                                Email Address
+                            </small>
+
+                            <h5>
+                                {{ current_user.email }}
+                            </h5>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+                    <div class="detail-box">
+
+
+                        <i class="bi bi-shield-check"></i>
+
+
+                        <div>
+
+                            <small>
+                                Account Type
+                            </small>
+
+
+                            <h5>
+                                {{ current_user.role }}
+                            </h5>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <div class="detail-box">
+
+
+                        <i class="bi bi-calendar"></i>
+
+
+                        <div>
+
+
+                            <small>
+                                Joined Date
+                            </small>
+
+
+                            <h5>
+
+                            {{ current_user.created_at.strftime("%d-%m-%Y") }}
+
+                            </h5>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+                <div class="profile-actions">
+
+
+                    <a href="{{ url_for('settings') }}" class="edit-btn">
+
+                        <i class="bi bi-pencil"></i>
+
+                        Edit Profile
+
+                    </a>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

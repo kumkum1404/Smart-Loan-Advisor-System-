@@ -1,0 +1,626 @@
+{% extends "base.html" %}
+
+{% block title %}
+AI Loan Planner
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/planner.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="planner-page">
+
+    {% include "components/sidebar.html" %}
+
+    <div class="planner-content">
+
+        {% include "components/topbar.html" %}
+
+        <div class="planner-header">
+
+            <h2>
+                AI Loan Planner
+            </h2>
+
+            <p>
+                Complete your financial profile to receive an AI-powered loan eligibility assessment.
+            </p>
+
+        </div>
+
+        <form action="/predict" method="POST" class="planner-form">
+
+            <!-- ========================= -->
+            <!-- PERSONAL INFORMATION -->
+            <!-- ========================= -->
+
+            <div class="card-custom">
+
+                <h4>
+                    Personal Information
+                </h4>
+
+                <div class="row">
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="age"
+                            min="18"
+                            max="70"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Gender
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="gender"
+                            required>
+
+                            <option value="">Select</option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+                            <option value="Others"> 
+                                Others
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Marital Status
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="married"
+                            required>
+
+                            <option value="">Select</option>
+
+                            <option value="Yes">
+                                Married
+                            </option>
+
+                            <option value="No">
+                                 Unmarried
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Dependents
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="dependents"
+                            required>
+
+                            <option value="0">0</option>
+
+                            <option value="1">1</option>
+
+                            <option value="2">2</option>
+
+                            <option value="3">3+</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Education
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="education"
+                            required>
+
+                            <option value="">Select</option>
+
+                            <option value="Graduate">
+                                Graduate
+                            </option>
+
+                            <option value="Not Graduate">
+                                Ungraduate
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label class="form-label">
+                            Property Area
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="property_area"
+                            required>
+
+                            <option value="">Select</option>
+
+                            <option value="Urban">
+                                Urban
+                            </option>
+
+                            <option value="Semiurban">
+                                Semiurban
+                            </option>
+
+                            <option value="Rural">
+                                Rural
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+                        <!-- ========================= -->
+            <!-- EMPLOYMENT DETAILS -->
+            <!-- ========================= -->
+
+            <div class="card-custom mt-4">
+
+                <h4>
+                    Employment Details
+                </h4>
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label">
+                            Employment Type
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="employment"
+                            required>
+
+                            <option value="">Select</option>
+
+                            <option value="Government">
+                                Government
+                            </option>
+
+                            <option value="Private">
+                                Private
+                            </option>
+
+                            <option value="Business">
+                                Business
+                            </option>
+
+                            <option value="Self Employed">
+                                Self Employed
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label">
+                            Monthly Income (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="income"
+                            min="0"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label">
+                            Total Savings (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="savings"
+                            min="0"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- FINANCIAL DETAILS -->
+            <!-- ========================= -->
+
+            <div class="card-custom mt-4">
+
+                <h4>
+                    Financial Information
+                </h4>
+
+                <div class="row">
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Monthly Expenses (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="expense"
+                            min="0"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Existing EMI (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="emi"
+                            min="0"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Credit Score
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="credit_score"
+                            min="300"
+                            max="900"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+
+                        <label class="form-label">
+                            Credit History
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="credit_history"
+                            required>
+
+                            <option value="">Select</option>
+
+                            <option value="1">
+                                Good
+                            </option>
+
+                            <option value="0">
+                                Poor
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+                        <!-- ========================= -->
+            <!-- LOAN DETAILS -->
+            <!-- ========================= -->
+
+            <div class="card-custom mt-4">
+
+                <h4>
+                    Loan Details
+                </h4>
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label">
+                            Loan Type
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="loan_type"
+                            required>
+
+                            <option value="">Select</option>
+
+                            <option value="Personal">
+                                Personal Loan
+                            </option>
+
+                            <option value="Home">
+                                Home Loan
+                            </option>
+
+                            <option value="Vehicle">
+                                Vehicle Loan
+                            </option>
+
+                            <option value="Education">
+                                Education Loan
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label">
+                            Loan Amount (₹)
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="loan_amount"
+                            min="50000"
+                            required>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <label class="form-label">
+                            Loan Tenure (Months)
+                        </label>
+
+                        <select
+                            class="form-select"
+                            name="tenure"
+                            required>
+
+                            <option value="60">5 Years</option>
+                            <option value="120">10 Years</option>
+                            <option value="180">15 Years</option>
+                            <option value="240">20 Years</option>
+                            <option value="300">25 Years</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ========================= -->
+            <!-- LIVE FINANCIAL SUMMARY -->
+            <!-- ========================= -->
+
+            <div class="card-custom mt-4">
+
+                <h4>
+                    Financial Summary
+                </h4>
+
+                <div class="row text-center">
+
+                    <div class="col-md-3">
+
+                        <h6>Monthly Income</h6>
+
+                        <h4 id="incomePreview">
+
+                            ₹0
+
+                        </h4>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <h6>Monthly Expenses</h6>
+
+                        <h4 id="expensePreview">
+
+                            ₹0
+
+                        </h4>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <h6>Existing EMI</h6>
+
+                        <h4 id="emiPreview">
+
+                            ₹0
+
+                        </h4>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <h6>Savings</h6>
+
+                        <h4 id="savingPreview">
+
+                            ₹0
+
+                        </h4>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="row text-center">
+
+                    <div class="col-md-6">
+
+                        <h5>
+
+                            Estimated Disposable Income
+
+                        </h5>
+
+                        <h3
+                            class="text-success"
+                            id="disposableIncome">
+
+                            ₹0
+
+                        </h3>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <h5>
+
+                            Credit Score
+
+                        </h5>
+
+                        <h3
+                            class="text-primary"
+                            id="creditPreview">
+
+                            0
+
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="text-end mt-4 mb-5">
+
+                <button
+                    type="submit"
+                    class="btn btn-primary btn-lg px-5">
+
+                    Analyze Loan Eligibility
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+<script>
+
+const income = document.querySelector('[name="income"]');
+const expense = document.querySelector('[name="expense"]');
+const emi = document.querySelector('[name="emi"]');
+const savings = document.querySelector('[name="savings"]');
+const credit = document.querySelector('[name="credit_score"]');
+
+function updateSummary() {
+
+    const incomeValue = Number(income.value) || 0;
+    const expenseValue = Number(expense.value) || 0;
+    const emiValue = Number(emi.value) || 0;
+    const savingValue = Number(savings.value) || 0;
+    const creditValue = Number(credit.value) || 0;
+
+    document.getElementById("incomePreview").innerText =
+        "₹" + incomeValue.toLocaleString();
+
+    document.getElementById("expensePreview").innerText =
+        "₹" + expenseValue.toLocaleString();
+
+    document.getElementById("emiPreview").innerText =
+        "₹" + emiValue.toLocaleString();
+
+    document.getElementById("savingPreview").innerText =
+        "₹" + savingValue.toLocaleString();
+
+    document.getElementById("creditPreview").innerText =
+        creditValue;
+
+    const disposable = incomeValue - expenseValue - emiValue;
+
+    document.getElementById("disposableIncome").innerText =
+        "₹" + disposable.toLocaleString();
+}
+
+income.addEventListener("input", updateSummary);
+expense.addEventListener("input", updateSummary);
+emi.addEventListener("input", updateSummary);
+savings.addEventListener("input", updateSummary);
+credit.addEventListener("input", updateSummary);
+
+</script>
+
+{% endblock %}

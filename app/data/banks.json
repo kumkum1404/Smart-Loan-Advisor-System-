@@ -1,0 +1,30 @@
+[
+    {
+        "name": "State Bank of India",
+        "rate": 8.35,
+        "processing_fee": "0.35%",
+        "tenure": 30,
+        "rating": 4.8
+    },
+    {
+        "name": "HDFC Bank",
+        "rate": 8.5,
+        "processing_fee": "0.50%",
+        "tenure": 30,
+        "rating": 4.7
+    },
+    {
+        "name": "ICICI Bank",
+        "rate": 8.6,
+        "processing_fee": "0.50%",
+        "tenure": 25,
+        "rating": 4.6
+    },
+    {
+        "name": "Axis Bank",
+        "rate": 8.7,
+        "processing_fee": "0.45%",
+        "tenure": 25,
+        "rating": 4.5
+    }
+]

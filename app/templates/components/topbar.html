@@ -1,0 +1,49 @@
+
+<div class="topbar">
+
+    <div class="top-left">
+       
+
+        <h2>
+            Welcome, {{ current_user.full_name }} 👋
+        </h2> 
+
+
+    </div>
+    
+
+    <div class="top-right">
+
+        <div class="profile">
+
+            <div class="text-end">
+
+                <strong>{{ current_user.full_name }}</strong><br>
+
+                <small>{{ current_user.role.title() }}</small>
+
+            </div>
+
+           <a href="{{ url_for('profile') }}" class="text-decoration-none">
+    <i class="bi bi-person-circle profile-icon"></i>
+</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const options = {
+    weekday:"long",
+    day:"numeric",
+    month:"long",
+    year:"numeric"
+};
+
+document.getElementById("currentDate").innerHTML =
+new Date().toLocaleDateString("en-IN",options);
+
+</script>

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}
+Settings
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/setting.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="setting-page">
+    {% include "components/sidebar.html" %}
+    <div class="setting-content">
+        {% include "components/topbar.html" %}
+
+
+        <div class="container mt-5">
+
+            <div class="card shadow-lg p-5">
+
+                <h2 class="mb-4">
+                    Account Settings
+                </h2>
+
+                <form method="POST" action="/settings">
+
+                    <div class="mb-3">
+
+                        <label>Full Name</label>
+
+                        <input type="text" class="form-control" name="full_name" value="{{ current_user.full_name }}">
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label>Email</label>
+
+                        <input type="email" class="form-control" value="{{ current_user.email }}" readonly>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label>New Password</label>
+
+                        <input type="password" class="form-control" name="password">
+
+                    </div>
+
+                    <button class="btn btn-primary">
+
+                        Save Changes
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <hr class="mt-5">
+
+            <h4 class="text-danger">⚠️ Danger Zone</h4>
+
+            <p class="text-muted">
+                Deleting your account will permanently remove your profile and prediction history.
+            </p>
+
+            <form action="{{ url_for('delete_account') }}" method="POST">
+
+                <button type="submit" class="btn btn-danger"
+                    onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">
+
+                    Delete My Account
+
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

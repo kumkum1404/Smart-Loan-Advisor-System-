@@ -1,0 +1,941 @@
+{% extends "base.html" %}
+
+{% block title %}
+LoanSense AI | Smart Loan Advisor
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/landing.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold fs-3 text-primary"
+href="/">
+
+<i class="bi bi-bank2"></i>
+
+LoanSense AI
+
+</a>
+
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbar">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+id="navbar">
+
+<ul class="navbar-nav ms-auto align-items-center">
+
+<li class="nav-item mx-2">
+
+<a class="nav-link"
+href="#features">
+
+Features
+
+</a>
+
+</li>
+
+<li class="nav-item mx-2">
+
+<a class="nav-link"
+href="#how">
+
+How It Works
+
+</a>
+
+</li>
+
+<li class="nav-item mx-2">
+
+<a class="nav-link"
+href="#about">
+
+About
+
+</a>
+
+</li>
+
+<li class="nav-item ms-3">
+
+<a href="/login"
+class="btn btn-outline-primary px-4">
+
+Login
+
+</a>
+
+</li>
+
+<li class="nav-item ms-2">
+
+<a href="/register"
+class="btn btn-primary px-4">
+
+Get Started
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- ===================== HERO ===================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- LEFT CONTENT -->
+
+            <div class="col-lg-6">
+
+                <span class="hero-badge">
+
+                    ✨ AI Powered Smart Loan Advisor System
+
+                </span>
+
+                <h1 class="display-4 fw-bold mt-4">
+
+                    Plan Your Loan
+
+                    <span class="text-primary">
+
+                        Before You Borrow.
+
+                    </span>
+
+                </h1>
+
+                <p class="hero-text mt-4">
+
+                    LoanSense AI helps you predict loan approval,
+                    estimate EMI, calculate your financial health score,
+                    compare banks and receive personalized AI recommendations
+                    before applying for a loan.
+
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="{{ url_for('register') }}"
+                       class="btn btn-primary btn-lg px-4 me-3">
+
+                        Get Started
+
+                        <i class="bi bi-arrow-right ms-2"></i>
+
+                    </a>
+
+                    <a href="#features"
+                       class="btn btn-outline-dark btn-lg px-4">
+
+                        Explore
+
+                    </a>
+
+                </div>
+
+                <!-- Hero Statistics -->
+
+                <div class="hero-stats mt-5">
+
+                    <div class="stat-box">
+
+                        <h2>92.20%</h2>
+
+                        <p>Model Accuracy</p>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <h2>5</h2>
+
+                        <p>ML Models Tested</p>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <h2>Gradient Boosting</h2>
+
+                        <p>Best Model</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+
+            <div class="col-lg-6">
+
+                <div class="text-center">
+
+                    <div class="home-logo">
+
+                        <i class="bi bi-house-door-fill"></i>
+
+                    </div>
+
+                    <div class="home-text mt-4">
+
+                        <h2 class="fw-bold">
+
+                            Smart Planning for Better Future
+
+                        </h2>
+
+                        <p class="text-muted">
+
+                            AI Powered Financial Planning
+                            for Better Loan Decisions
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ===================== FEATURES ===================== -->
+
+<section id="features" class="features-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">OUR FEATURES</span>
+
+            <h2 class="fw-bold mt-3">
+
+                Everything You Need Before Taking a Loan
+
+            </h2>
+
+            <p class="text-muted">
+
+                LoanSense AI provides powerful AI-driven financial tools
+                to help users make smarter borrowing decisions.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-circle bg-primary">
+
+                        <i class="bi bi-robot"></i>
+
+                    </div>
+
+                    <h4>AI Loan Prediction</h4>
+
+                    <p>
+
+                        Predict your loan approval chance instantly using
+                        Machine Learning algorithms.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-circle bg-success">
+
+                        <i class="bi bi-calculator"></i>
+
+                    </div>
+
+                    <h4>EMI Calculator</h4>
+
+                    <p>
+
+                        Calculate accurate EMI before applying for any
+                        type of loan.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-circle bg-warning">
+
+                        <i class="bi bi-graph-up-arrow"></i>
+
+                    </div>
+
+                    <h4>Financial Health Score</h4>
+
+                    <p>
+
+                        Understand your repayment capacity with AI-driven
+                        financial analysis.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-circle bg-danger">
+
+                        <i class="bi bi-bank2"></i>
+
+                    </div>
+
+                    <h4>Bank Comparison</h4>
+
+                    <p>
+
+                        Compare banks, interest rates,
+                        processing fees and loan tenure.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-circle bg-info">
+
+                        <i class="bi bi-bar-chart-line"></i>
+
+                    </div>
+
+                    <h4>Interactive Dashboard</h4>
+
+                    <p>
+
+                        Visualize loan history, reports and
+                        prediction analytics.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="feature-card">
+
+                    <div class="feature-circle bg-dark">
+
+                        <i class="bi bi-lightbulb"></i>
+
+                    </div>
+
+                    <h4>Explainable AI</h4>
+
+                    <p>
+
+                        Know why your loan is approved or rejected
+                        with intelligent recommendations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+
+<section id="how" class="how-section py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+
+                PROCESS
+
+            </span>
+
+            <h2 class="fw-bold mt-3">
+
+                How LoanSense AI Works
+
+            </h2>
+
+            <p class="text-muted">
+
+                Just three simple steps to smarter borrowing.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+
+                        1
+
+                    </div>
+
+                    <i class="bi bi-person-lines-fill display-4 text-primary mb-3"></i>
+
+                    <h4>
+
+                        Enter Details
+
+                    </h4>
+
+                    <p>
+
+                        Fill in your income, expenses,
+                        employment details,
+                        loan amount and tenure.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+
+                        2
+
+                    </div>
+
+                    <i class="bi bi-cpu display-4 text-success mb-3"></i>
+
+                    <h4>
+
+                        AI Analysis
+
+                    </h4>
+
+                    <p>
+
+                        Machine Learning evaluates your
+                        complete financial profile
+                        within seconds.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="step-card">
+
+                    <div class="step-number">
+
+                        3
+
+                    </div>
+
+                    <i class="bi bi-award-fill display-4 text-warning mb-3"></i>
+
+                    <h4>
+
+                        Get Recommendation
+
+                    </h4>
+
+                    <p>
+
+                        Receive loan eligibility,
+                        EMI calculation,
+                        safest loan amount,
+                        bank offers and AI recommendation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== FAQ ===================== -->
+
+<section class="faq-section py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+
+                FAQ
+
+            </span>
+
+            <h2 class="fw-bold mt-3">
+
+                Frequently Asked Questions
+
+            </h2>
+
+            <p class="text-muted">
+
+                Find answers to common questions about LoanSense AI.
+
+            </p>
+
+        </div>
+
+        <div class="accordion shadow rounded-4 overflow-hidden"
+             id="faqAccordion">
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq1">
+
+                        Does LoanSense AI directly approve loans?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq1"
+                     class="accordion-collapse collapse show">
+
+                    <div class="accordion-body">
+
+                        No. LoanSense AI predicts your eligibility
+                        using Machine Learning models and provides
+                        personalized recommendations before applying.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+
+                        How accurate is the prediction?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq2"
+                     class="accordion-collapse collapse">
+
+                    <div class="accordion-body">
+
+                        The prediction is generated using trained
+                        Machine Learning algorithms on historical
+                        loan datasets.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+
+                        Can I compare multiple banks?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq3"
+                     class="accordion-collapse collapse">
+
+                    <div class="accordion-body">
+
+                        Yes. LoanSense AI allows you to compare
+                        interest rates, EMI, tenure and processing
+                        fees from multiple banks.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header">
+
+                    <button class="accordion-button collapsed"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#faq4">
+
+                        Is my financial information secure?
+
+                    </button>
+
+                </h2>
+
+                <div id="faq4"
+                     class="accordion-collapse collapse">
+
+                    <div class="accordion-body">
+
+                        Yes. Your information is used only for
+                        prediction purposes and is securely stored.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== CALL TO ACTION ===================== -->
+
+<!-- ===================== CALL TO ACTION ===================== -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-card text-center">
+
+            <h3 class="fw-bold">
+
+                Ready To Plan Your Loan?
+
+            </h3>
+
+            <p class="mt-3">
+
+                Join thousands of users using AI to make better financial decisions.
+
+            </p>
+
+            <a href="{{ url_for('register') }}"
+               class="btn btn-primary btn-lg mt-3">
+
+                Start Planning
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="row gy-4">
+
+<div class="col-lg-4">
+
+<h3 class="text-white">
+
+<i class="bi bi-bank2"></i>
+
+LoanSense AI
+
+</h3>
+
+<p class="mt-3">
+
+Smart AI Loan Advisor that helps users
+predict loan eligibility,
+calculate EMI,
+compare banks
+and make better financial decisions.
+
+</p>
+
+</div>
+
+
+
+<div class="col-lg-2">
+
+<h5>
+
+Product
+
+</h5>
+
+<ul class="footer-links">
+
+<li>
+
+<a href="#features">
+
+Features
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#how">
+
+How It Works
+
+</a>
+
+</li>
+
+<li>
+
+<a href="/login">
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="/register">
+
+Planner
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="col-lg-2">
+
+<h5>
+
+Quick Links
+
+</h5>
+
+<ul class="footer-links">
+
+<li>
+
+<a href="#about">
+
+About
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Privacy
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Terms
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Support
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="col-lg-4">
+
+<h5>
+
+Connect With Us
+
+</h5>
+
+<p>
+
+Stay updated with AI powered financial planning.
+
+</p>
+
+<div class="social-icons mt-4">
+
+<a href="#">
+
+<i class="bi bi-facebook"></i>
+
+</a>
+
+<a href="#">
+
+<i class="bi bi-linkedin"></i>
+
+</a>
+
+<a href="#">
+
+<i class="bi bi-twitter-x"></i>
+
+</a>
+
+<a href="#">
+
+<i class="bi bi-github"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr class="mt-5">
+
+<div class="text-center">
+
+<p>
+
+© 2026 LoanSense AI
+
+</p>
+
+<p>
+
+Designed & Developed by
+
+<strong>
+
+Kumkum ❤️
+
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+{% endblock %}

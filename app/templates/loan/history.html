@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block title %}
+Prediction History
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/history.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="history-page">
+
+    {% include "components/sidebar.html" %}
+
+    <div class="history-content">
+
+        {% include "components/topbar.html" %}
+
+        <div class="loan-history-page">
+
+            <div class="history-container">
+
+                <div class="history-card">
+
+                    <div class="history-header">
+
+                        <h3 class="mb-0">
+                            My Loan Prediction History
+                        </h3>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        {% if predictions %}
+
+                        <table class="history-table">
+                            <thead>
+
+                                <tr>
+
+                                    <th>#</th>
+
+                                    <th>Income</th>
+
+                                    <th>Loan Amount</th>
+
+                                    <th>Credit Score</th>
+
+                                    <th>Prediction</th>
+
+                                    <th>Confidence</th>
+
+                                    <th>Date</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                {% for item in predictions %}
+
+                                <tr>
+
+                                    <td>{{ loop.index }}</td>
+
+                                    <td>₹ {{ item.income }}</td>
+
+                                    <td>₹ {{ item.loan_amount }}</td>
+
+                                    <td>{{ item.credit_score }}</td>
+
+                                    <td>
+
+                                        {% if item.prediction == "Approved" %}
+
+                                        <span class="badge bg-success">
+
+                                            Approved
+
+                                        </span>
+
+                                        {% else %}
+
+                                        <span class="badge bg-danger">
+
+                                            Rejected
+
+                                        </span>
+
+                                        {% endif %}
+
+                                    </td>
+
+                                    <td>{{ item.probability }}%</td>
+
+                                    <td>{{ item.created_at.strftime("%d-%m-%Y %H:%M") }}</td>
+
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+                        {% else %}
+
+                        <div class="alert alert-info">
+
+                            No prediction history available.
+
+                        </div>
+
+                        {% endif %}
+
+                        <a href="/planner" class="history-btn primary-btn mt-3">
+
+                            New Prediction
+
+                        </a>
+
+                        <a href="{{ url_for('report') }}" class="history-btn success-btn mt-3">
+                            📄 Download Latest Report
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

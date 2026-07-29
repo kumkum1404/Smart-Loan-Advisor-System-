@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block css %}
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    {% include "components/sidebar.html" %}
+
+    <div class="main-content">
+         <div id="page-content">
+        {% include "components/topbar.html" %}
+        
+
+        {% include "components/stat_card.html" %}
+
+        {% include "components/chart.html" %}
+         </div>
+
+    </div>
+
+    
+
+</div>
+
+{% endblock %}

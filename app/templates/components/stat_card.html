@@ -1,0 +1,220 @@
+
+<div class="row g-4">
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="stat-card total-card">
+
+            <div class="stat-icon">
+                <i class="bi bi-bar-chart-line-fill"></i>
+            </div>
+
+            <div>
+
+                <h6>Total Predictions</h6>
+
+                <h2>{{ total_predictions }}</h2>
+
+                <small>Total Loan Analyses</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="stat-card approved-card">
+
+            <div class="stat-icon">
+
+                <i class="bi bi-check-circle-fill"></i>
+
+            </div>
+
+            <div>
+
+                <h6>Approved</h6>
+
+                <h2>{{ approved }}</h2>
+
+                <small>Eligible Applications</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="stat-card rejected-card">
+
+            <div class="stat-icon">
+
+                <i class="bi bi-x-circle-fill"></i>
+
+            </div>
+
+            <div>
+
+                <h6>Rejected</h6>
+
+                <h2>{{ rejected }}</h2>
+
+                <small>Not Eligible</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+
+        <div class="stat-card rate-card">
+
+            <div class="stat-icon">
+
+                <i class="bi bi-graph-up-arrow"></i>
+
+            </div>
+
+            <div>
+
+                <h6>Approval Rate</h6>
+
+                <h2>{{ approval_rate }}%</h2>
+
+                <small>Overall Success Rate</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Quick Actions -->
+
+<div class="row mt-4">
+
+    <div class="col-lg-6">
+
+        <div class="action-card">
+
+            <i class="bi bi-cpu-fill"></i>
+
+            <h4>AI Loan Planner</h4>
+
+            <p>
+                Analyze your financial profile and receive an AI-powered loan eligibility assessment.
+            </p>
+
+            <a href="{{ url_for('planner') }}" class="btn btn-primary">
+
+                Analyze Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="col-lg-6">
+
+        <div class="action-card">
+
+            <i class="bi bi-clock-history"></i>
+
+            <h4>Prediction History</h4>
+
+            <p>
+
+                View all previous loan analyses and download detailed PDF reports.
+
+            </p>
+
+            <a href="{{ url_for('history') }}" class="btn btn-success">
+
+                View History
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{% if latest %}
+
+<div class="latest-card mt-4">
+
+    <div class="d-flex justify-content-between align-items-center">
+
+        <h4>
+
+            <i class="bi bi-stars text-warning"></i>
+
+            Latest Prediction
+
+        </h4>
+
+        {% if latest.prediction=="Approved" %}
+
+        <span class="badge bg-success fs-6">
+
+            Approved
+
+        </span>
+
+        {% else %}
+
+        <span class="badge bg-danger fs-6">
+
+            Rejected
+
+        </span>
+
+        {% endif %}
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <strong>Loan Amount</strong>
+
+            <h5>₹ {{ "{:,.0f}".format(latest.loan_amount) }}</h5>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <strong>Credit Score</strong>
+
+            <h5>{{ latest.credit_score }}</h5>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <strong>Confidence</strong>
+
+            <h5>{{ latest.probability }}%</h5>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endif %}

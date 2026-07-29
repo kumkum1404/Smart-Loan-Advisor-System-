@@ -1,0 +1,191 @@
+<div class="card shadow border-0 rounded-4 mt-4">
+
+    <div class="card-header bg-white">
+
+        <h4 class="mb-0">
+
+            <i class="bi bi-bar-chart-fill text-primary"></i>
+
+            Loan Analytics
+
+        </h4>
+
+    </div>
+
+    <div class="card-body">
+
+        <canvas id="loanChart" height="110"></canvas>
+
+    </div>
+
+</div>
+
+
+<!-- AI Insights -->
+
+<div class="card shadow border-0 rounded-4 mt-4">
+
+    <div class="card-header bg-white">
+
+        <h5 class="mb-0">
+
+            🤖 AI Financial Insights
+
+        </h5>
+
+    </div>
+
+    <div class="card-body">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <h6>Approval Rate</h6>
+
+                <h3 class="text-success">
+
+                    {{ approval_rate }}%
+
+                </h3>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <h6>Risk Level</h6>
+
+                {% if approval_rate >= 70 %}
+
+                <span class="badge bg-success fs-6">
+
+                    Low Risk
+
+                </span>
+
+                {% elif approval_rate >= 50 %}
+
+                <span class="badge bg-warning fs-6">
+
+                    Medium Risk
+
+                </span>
+
+                {% else %}
+
+                <span class="badge bg-danger fs-6">
+
+                    High Risk
+
+                </span>
+
+                {% endif %}
+
+            </div>
+
+            <div class="col-md-5">
+
+                <h6>AI Recommendation</h6>
+
+                <p class="mb-0">
+
+                    Maintain your credit score above <b>750</b>,
+                    keep EMI below <b>30%</b> of your monthly income,
+                    and maintain regular savings for better loan approval chances.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+new Chart(document.getElementById("loanChart"),{
+
+type:"bar",
+
+data:{
+
+labels:[
+
+"Total Predictions",
+
+"Approved",
+
+"Rejected"
+
+],
+
+datasets:[{
+
+data:[
+
+{{ total_predictions }},
+
+{{ approved }},
+
+{{ rejected }}
+
+],
+
+backgroundColor:[
+
+"#2563EB",
+
+"#22C55E",
+
+"#EF4444"
+
+],
+
+borderRadius:10
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+
+legend:{
+
+display:false
+
+}
+
+},
+
+scales:{
+
+y:{
+
+beginAtZero:true,
+
+ticks:{
+
+stepSize:1
+
+}
+
+}
+
+}
+
+}
+
+});
+
+});
+
+</script>

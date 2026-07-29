@@ -1,0 +1,463 @@
+/* ==========================
+   LOAN HISTORY UI
+========================== */
+
+
+
+.history-container{
+
+    margin-top:0px;
+
+}
+
+.loan-history-page{
+
+    min-height:100vh;
+
+    padding:60px 0;
+
+    background:
+
+    radial-gradient(
+        circle at 10% 20%,
+        rgba(59,130,246,0.18),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 90% 80%,
+        rgba(168,85,247,0.18),
+        transparent 30%
+    ),
+
+    #f8fafc;
+
+}
+
+.history-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    border:none;
+   
+
+}
+
+
+
+.history-header{
+
+    background:linear-gradient(
+        135deg,
+        #1E3A8A,
+        #2563EB
+    );
+
+    padding:30px;
+
+    color:white;
+
+}
+
+
+.history-header h3{
+
+    font-weight:700;
+
+    margin:0;
+
+}
+
+
+
+/* TABLE */
+
+
+.history-table{
+
+    width:100%;
+
+    border-collapse:separate;
+
+    border-spacing:0 12px;
+
+}
+
+
+
+.history-table thead th{
+
+    background:#EFF6FF;
+
+    color:#1E293B;
+
+    padding:16px;
+
+    border:none;
+
+    font-weight:700;
+
+}
+
+
+
+.history-table tbody tr{
+
+    background:white;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+
+
+.history-table tbody tr:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+
+.history-table td{
+
+    padding:18px;
+
+    border:none;
+
+    color:#475569;
+
+}
+
+
+
+.history-table tbody td:first-child{
+
+    border-radius:15px 0 0 15px;
+
+}
+
+
+.history-table tbody td:last-child{
+
+    border-radius:0 15px 15px 0;
+
+}
+
+
+
+/* STATUS BADGE */
+
+
+.history-table .badge{
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+/* BUTTONS */
+
+
+.history-btn{
+
+    padding:14px 30px;
+
+    border-radius:14px;
+
+    color:white;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    display:inline-block;
+
+    transition:.3s;
+
+}
+
+
+
+.history-btn:hover{
+
+    transform:translateY(-4px);
+
+    color:white;
+
+}
+
+
+
+.primary-btn{
+
+    background:linear-gradient(
+        90deg,
+        #2563EB,
+        #3B82F6
+    );
+
+}
+
+
+
+.success-btn{
+
+    background:linear-gradient(
+        90deg,
+        #16A34A,
+        #22C55E
+    );
+
+}
+
+
+
+/* EMPTY */
+
+
+.loan-history-page .alert{
+
+    border-radius:16px;
+
+    padding:20px;
+
+}
+
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+.history-table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+
+.history-header h3{
+
+    font-size:22px;
+
+}
+
+
+.history-btn{
+
+    width:100%;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+
+}
+.history-content{
+
+    margin-left:260px;
+
+    min-height:100vh;
+
+    padding:35px;
+
+    background:#F5F7FB;
+
+}
+
+.history-page{
+
+    background:#F5F7FB;
+    min-height:100vh;
+
+}
+
+
+/* ==========================
+   SIDEBAR (Same as Dashboard)
+========================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#0F172A;
+
+    color:#fff;
+
+    padding:30px 20px;
+
+    overflow-y:auto;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    margin-bottom:40px;
+
+}
+
+.logo h3{
+
+    color:#fff;
+
+    font-weight:700;
+
+}
+
+.menu{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.menu li{
+
+    margin-bottom:12px;
+
+}
+
+.menu li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+    color:#CBD5E1;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.menu li a:hover{
+
+    background:#1E293B;
+
+    color:#fff;
+
+}
+
+.menu li a i{
+
+    font-size:18px;
+
+}
+
+/* ---------- TOPBAR ---------- */
+
+.topbar{
+
+    background:#334155;
+
+    color:#fff;
+
+    border-radius:18px;
+
+    padding:20px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+    margin-bottom:25px;
+
+}
+
+.top-left h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin-bottom:6px;
+
+}
+
+.subtitle{
+
+    color:#E2E8F0;
+
+    margin-bottom:8px;
+
+}
+
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.profile strong{
+
+   color:#ffffff;
+
+}
+
+.profile small{
+
+   color:#CBD5E1;
+
+}
+
+.profile-icon{
+
+    font-size:46px;
+
+    color:#93C5FD;
+
+}

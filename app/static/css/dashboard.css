@@ -1,0 +1,359 @@
+.dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#f8fafc;
+
+}
+
+/* ==========================
+   SIDEBAR (Same as Dashboard)
+========================== */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#0F172A;
+
+    color:#fff;
+
+    padding:30px 20px;
+
+    overflow-y:auto;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    margin-bottom:40px;
+
+}
+
+.logo h3{
+
+    color:#fff;
+
+    font-weight:700;
+
+}
+
+.menu{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.menu li{
+
+    margin-bottom:12px;
+
+}
+
+.menu li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+    color:#CBD5E1;
+
+    padding:14px 16px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.menu li a:hover{
+
+    background:#1E293B;
+
+    color:#fff;
+
+}
+
+.menu li a i{
+
+    font-size:18px;
+
+}
+
+
+/* ---------- TOPBAR ---------- */
+
+.topbar{
+
+    background:#334155;
+
+    color:#fff;
+
+    border-radius:18px;
+
+    padding:20px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+    margin-bottom:25px;
+
+}
+
+.top-left h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin-bottom:6px;
+
+}
+
+.subtitle{
+
+    color:#E2E8F0;
+
+    margin-bottom:8px;
+
+}
+
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.profile strong{
+
+   color:#ffffff;
+
+}
+
+.profile small{
+
+   color:#CBD5E1;
+
+}
+
+.profile-icon{
+
+    font-size:46px;
+
+    color:#93C5FD;
+
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.stat-card h2{
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+
+
+
+/* ---------- STAT CARDS ---------- */
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.stat-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:#fff;
+
+}
+
+.total-card .stat-icon{
+
+    background:#2563EB;
+
+}
+
+.approved-card .stat-icon{
+
+    background:#16A34A;
+
+}
+
+.rejected-card .stat-icon{
+
+    background:#DC2626;
+
+}
+
+.rate-card .stat-icon{
+
+    background:#F59E0B;
+
+}
+
+.action-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    height:100%;
+
+}
+
+.action-card i{
+
+    font-size:45px;
+
+    color:#2563EB;
+
+    margin-bottom:15px;
+
+}
+
+.latest-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+* Dashboard */
+
+.dashboard{
+
+    display:flex;
+
+    background:#F5F7FB;
+
+}
+
+/* Sidebar */
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#1E293B;
+
+    overflow-y:auto;
+
+    z-index:1000;
+
+}
+
+
+
+.dashboard{
+
+    background:#f8fafc;
+
+    min-height:100vh;
+
+}
+.main-content{
+
+    margin-left: 260px;
+
+    width: calc(100% - 260px);
+
+    min-height: 100vh;
+
+    padding: 30px;
+
+}
