@@ -9,15 +9,13 @@ Dashboard
 <link rel="stylesheet"
 href="{{ url_for('static', filename='css/dashboard.css') }}">
 
-<link rel="stylesheet"
-href="{{ url_for('static',
-filename='css/responsive.css') }}">
+
 
 {% endblock %}
 
 {% block content %}
 
-<div class="dashboard">
+<div class="app-layout">
 
     {% include "components/sidebar.html" %}
 

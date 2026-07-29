@@ -1,0 +1,72 @@
+.topbar{
+
+    background:#334155;
+
+    color:#fff;
+
+    border-radius:18px;
+
+    padding:20px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+
+    margin-bottom:25px;
+
+}
+
+.top-left h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    margin-bottom:6px;
+
+}
+
+.subtitle{
+
+    color:#E2E8F0;
+
+    margin-bottom:8px;
+
+}
+
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.profile strong{
+
+   color:#ffffff;
+
+}
+
+.profile small{
+
+   color:#CBD5E1;
+
+}
+
+.profile-icon{
+
+    font-size:46px;
+
+    color:#93C5FD;
+
+}

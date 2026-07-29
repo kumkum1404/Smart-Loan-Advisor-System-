@@ -1,0 +1,41 @@
+/* =========================
+GLOBAL APP LAYOUT
+========================= */
+
+
+.app-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+    background:#f8fafc;
+
+}
+
+
+.main-content,
+.planner-content,
+.emi-content,
+.bank-content,
+.profile-content,
+.history-content,
+.setting-content{
+
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    min-height:100vh;
+
+    padding:30px;
+
+}
+
+
+.page-container{
+
+    width:100%;
+
+}

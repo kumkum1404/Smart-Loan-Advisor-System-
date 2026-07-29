@@ -1,96 +1,12 @@
-/* ===============================
-   GLOBAL RESPONSIVE
-==================================*/
+@media(max-width:992px){
 
-*{
-    box-sizing:border-box;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-.container,
-.container-fluid{
-    width:100%;
-}
-
-/* ===============================
-   DESKTOP
-==================================*/
-
-@media (min-width:1200px){
-
-.content,
-.profile-content,
-.compare-content,
-.loan-content,
-.dashboard-content{
-
-    margin-left:260px;
-    width:calc(100% - 260px);
-    padding:25px;
-
-}
-
-}
-
-/* ===============================
-   TABLET
-==================================*/
-
-@media (max-width:992px){
 
 .sidebar{
 
-    width:220px;
-
-}
-
-.content,
-.profile-content,
-.compare-content,
-.loan-content,
-.dashboard-content{
-
-    margin-left:220px;
-    width:calc(100% - 220px);
-    padding:20px;
-
-}
-
-.profile-details{
-
-    grid-template-columns:1fr;
-
-}
-
-.stat-cards{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-/* ===============================
-   MOBILE
-==================================*/
-
-@media (max-width:768px){
-
-.sidebar{
-
-    position:fixed;
     left:-260px;
-    top:0;
-    width:260px;
-    height:100%;
-    transition:.35s;
-    z-index:9999;
 
 }
+
 
 .sidebar.active{
 
@@ -98,141 +14,74 @@ img{
 
 }
 
-.content,
-.profile-content,
-.compare-content,
-.loan-content,
-.dashboard-content{
 
-    margin-left:0;
-    width:100%;
-    padding:15px;
+.mobile-toggle{
 
-}
+    display:flex;
 
-.topbar{
+    position:fixed;
 
-    padding:15px;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:10px;
+    top:15px;
 
-}
+    left:15px;
 
-.top-left h2{
+    z-index:2000;
 
-    font-size:20px;
+    background:#2563eb;
 
-}
+    color:white;
 
-.profile{
+    border:none;
 
-    width:100%;
-    justify-content:space-between;
+    width:45px;
 
-}
+    height:45px;
 
-.profile-banner{
+    border-radius:10px;
 
-    flex-direction:column;
-    text-align:center;
+    align-items:center;
 
-}
-
-.profile-details{
-
-    grid-template-columns:1fr;
-
-}
-
-.stat-cards{
-
-    grid-template-columns:1fr;
-
-}
-
-.table-wrapper{
-
-    overflow-x:auto;
-
-}
-
-.bank-table,
-.history-table{
-
-    min-width:700px;
-
-}
-
-.compare-card,
-.profile-card,
-.history-card,
-.emi-card,
-.settings-card{
-
-    padding:20px;
-
-}
-
-input,
-select,
-textarea,
-button{
-
-    width:100%;
-
-}
-
-.history-btn,
-.edit-btn,
-.submit-btn{
-
-    width:100%;
     justify-content:center;
-
-}
-
-}
-
-/* ===============================
-   SMALL MOBILE
-==================================*/
-
-@media (max-width:576px){
-
-.top-left h2{
-
-    font-size:18px;
-
-}
-
-.profile-avatar{
-
-    width:80px;
-    height:80px;
-    font-size:35px;
-
-}
-
-.profile-title h2{
 
     font-size:24px;
 
 }
 
-.detail-box{
 
-    flex-direction:column;
-    text-align:center;
+.main-content,
+.planner-content,
+.emi-content,
+.bank-content,
+.profile-content,
+.history-content,
+.setting-content{
+
+    margin-left:0;
+
+    width:100%;
+
+    padding:70px 15px 20px;
 
 }
 
-.compare-card,
-.profile-card,
-.history-card,
-.emi-card{
 
-    border-radius:18px;
+.topbar{
+
+    width:100%;
+
+}
+
+
+.stats{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.profile-details{
+
+    grid-template-columns:1fr;
 
 }
 
