@@ -15,9 +15,6 @@ from app.ai.groq_ai import chat_with_ai
 from flask import jsonify
 
 
-
-
-
 print("Current Folder :", os.getcwd())
 print("Database Path :", os.path.abspath("instance/loan_prediction.db"))
 

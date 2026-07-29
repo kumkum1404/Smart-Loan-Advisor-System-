@@ -103,43 +103,126 @@ The best-performing model is used for prediction.
 
 ---
 
-# 📂 Project Structure
+# 🔄 Project Workflow
 
 ```text
-Loan_Prediction
-
-│
-
-├── app/
-
-│ ├── ai/
-
-│ ├── ml/
-
-│ ├── templates/
-
-│ ├── static/
-
-│ ├── models.py
-
-│ └── routes.py
-
-│
-
-├── dataset/
-
-├── instance/
-
-├── requirements.txt
-
-├── run.py
-
-├── Procfile
-
-└── README.md
+                         USER
+                           │
+                           ▼
+                 Register / Login
+                           │
+                           ▼
+                  User Dashboard
+                           │
+                           ▼
+                Fill Loan Planner Form
+                           │
+                           ▼
+             Input Validation & Preprocessing
+                           │
+                           ▼
+          Machine Learning Prediction Model
+          (Gradient Boosting Classifier)
+                           │
+             ┌─────────────┴─────────────┐
+             ▼                           ▼
+      Loan Approved              Loan Rejected
+             │                           │
+             └─────────────┬─────────────┘
+                           ▼
+            Explainable AI Recommendation
+                           │
+                           ▼
+                 EMI Calculation Module
+                           │
+                           ▼
+               Compare Bank Interest Rates
+             (Static Data → Future Live API)
+                           │
+                           ▼
+          Store Prediction in SQL Database
+                 (SQLite + SQLAlchemy)
+                           │
+                           ▼
+          Loan History & PDF Report Download
+                           │
+                           ▼
+             AI Financial Assistant (Groq)
 ```
 
 ---
+
+## 📌 Workflow Explanation
+
+### Step 1: User Authentication
+- Secure User Registration & Login
+- Password Hashing using Flask-Bcrypt
+
+### Step 2: Dashboard
+- Personalized dashboard after login
+- Quick access to all loan services
+
+### Step 3: Loan Planner
+Users enter:
+- Age
+- Income
+- Employment Type
+- Credit Score
+- Loan Amount
+- Existing Debt
+- Savings Ratio
+- Financial Information
+
+### Step 4: Data Processing
+- Input Validation
+- Data Cleaning
+- Feature Engineering
+- Preprocessing
+
+### Step 5: AI Loan Prediction
+The trained **Gradient Boosting Machine Learning Model** predicts:
+- Loan Approval Status
+- Approval Probability
+
+### Step 6: Explainable AI
+Provides reasons behind the prediction:
+- Positive Factors
+- Risk Factors
+- Financial Suggestions
+
+### Step 7: EMI Calculator
+Calculates:
+- Monthly EMI
+- Total Interest
+- Total Repayment Amount
+
+### Step 8: Bank Comparison
+Current Features:
+- Compare Interest Rates
+- Processing Fees
+- Loan Tenure
+
+**Future Enhancement**
+- Real-Time Bank Interest Rate API Integration
+
+### Step 9: Database Storage
+Prediction details are securely stored using:
+- SQLite
+- SQLAlchemy ORM
+
+### Step 10: Reports & History
+Users can:
+- View Prediction History
+- Download PDF Reports
+
+### Step 11: AI Financial Assistant
+AI chatbot provides:
+- Loan Guidance
+- Financial Advice
+- Budget Recommendations
+
+---
+
 
 # 📸 Screenshots
 
@@ -211,7 +294,7 @@ python run.py
 
 - Credit Score Analysis
 
-- Email Notifications
+- Email Notifications / SMS Alerts
 
 - PostgreSQL Cloud Database
 
