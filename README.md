@@ -224,38 +224,6 @@ AI chatbot provides:
 ---
 
 
-# 📸 Screenshots
-
-## Dashboard
-
-(Add Dashboard Screenshot Here)
-
----
-
-## Loan Planner
-
-(Add Loan Planner Screenshot Here)
-
----
-
-## EMI Calculator
-
-(Add EMI Calculator Screenshot Here)
-
----
-
-## Compare Banks
-
-(Add Compare Banks Screenshot Here)
-
----
-
-## User Profile
-
-(Add Profile Screenshot Here)
-
----
-
 # 🚀 Installation
 
 Clone Repository
