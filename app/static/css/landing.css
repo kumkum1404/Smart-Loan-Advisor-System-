@@ -533,86 +533,129 @@ body{
 
 @media (max-width:768px){
 
-    /* Header */
+.hero-section{
 
-    .navbar{
-        padding:12px 16px;
-    }
+    padding:18px 18px 35px;
+    text-align:center;
 
-    .logo img{
-        height:38px;
-    }
+}
 
-    /* Stats Cards */
+.hero-title{
 
-    .stats-section{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:14px;
-        margin:20px 16px;
-    }
+    font-size:30px;
+    line-height:1.2;
+    margin-top:12px;
 
-    .stat-card{
-        width:100%;
-        margin:0;
-        padding:20px;
-        border-radius:18px;
-    }
+}
 
-    .stat-card h2{
-        font-size:28px;
-    }
+.hero-subtitle{
 
-    .stat-card p{
-        font-size:14px;
-    }
+    font-size:15px;
+    margin-top:10px;
 
-    /* Hero Section */
+}
 
-    .hero-section{
-        padding:20px 18px 35px;
-        text-align:center;
-    }
+.stats-container{
 
-    /* Circle */
+display:grid;
 
-    .hero-circle{
-        width:180px;
-        height:180px;
-        margin:20px auto;
-    }
+grid-template-columns:1fr 1fr;
 
-    .hero-circle i{
-        font-size:72px;
-    }
+gap:12px;
 
-    /* Heading */
+margin-top:22px;
 
-    .hero-title{
-        font-size:34px;
-        line-height:1.2;
-        margin-top:15px;
-    }
+}
 
-    .hero-subtitle{
-        font-size:16px;
-        line-height:1.6;
-        margin-top:10px;
-    }
+.stat-card{
 
-    /* Buttons */
+width:100%;
 
-    .hero-buttons{
-        display:flex;
-        flex-direction:column;
-        gap:14px;
-        margin-top:25px;
-    }
+margin:0;
 
-    .hero-buttons .btn{
-        width:100%;
-        height:52px;
-        font-size:16px;
-    }
+padding:18px;
+
+}
+
+
+.hero-circle{
+
+width:150px;
+height:150px;
+
+margin:18px auto;
+
+}
+
+.hero-circle i{
+
+font-size:65px;
+
+}
+
+.feature-card{
+
+padding:18px;
+
+border-radius:16px;
+
+}
+
+.feature-card h4{
+
+font-size:17px;
+
+}
+
+.feature-card p{
+
+font-size:14px;
+
+}
+
+.workflow-card{
+
+padding:18px;
+
+min-height:auto;
+
+}
+
+
+.accordion-button{
+
+font-size:15px;
+
+padding:15px;
+
+}
+
+.cta-section{
+
+padding:35px 20px;
+
+text-align:center;
+
+}
+
+.cta-section h2{
+
+font-size:28px;
+
+}
+
+
+.footer{
+
+padding:40px 20px;
+
+}
+
+.footer .row{
+
+text-align:center;
+
+}
+
 
 }
