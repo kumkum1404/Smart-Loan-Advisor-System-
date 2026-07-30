@@ -527,4 +527,92 @@ body{
 }
 
 
-   
+   /* =========================================
+   MOBILE LANDING PAGE
+========================================= */
+
+@media (max-width:768px){
+
+    /* Header */
+
+    .navbar{
+        padding:12px 16px;
+    }
+
+    .logo img{
+        height:38px;
+    }
+
+    /* Stats Cards */
+
+    .stats-section{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:14px;
+        margin:20px 16px;
+    }
+
+    .stat-card{
+        width:100%;
+        margin:0;
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .stat-card h2{
+        font-size:28px;
+    }
+
+    .stat-card p{
+        font-size:14px;
+    }
+
+    /* Hero Section */
+
+    .hero-section{
+        padding:20px 18px 35px;
+        text-align:center;
+    }
+
+    /* Circle */
+
+    .hero-circle{
+        width:180px;
+        height:180px;
+        margin:20px auto;
+    }
+
+    .hero-circle i{
+        font-size:72px;
+    }
+
+    /* Heading */
+
+    .hero-title{
+        font-size:34px;
+        line-height:1.2;
+        margin-top:15px;
+    }
+
+    .hero-subtitle{
+        font-size:16px;
+        line-height:1.6;
+        margin-top:10px;
+    }
+
+    /* Buttons */
+
+    .hero-buttons{
+        display:flex;
+        flex-direction:column;
+        gap:14px;
+        margin-top:25px;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+        height:52px;
+        font-size:16px;
+    }
+
+}

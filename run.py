@@ -409,6 +409,7 @@ def predict():
     db.session.add(history)
 
     db.session.commit()
+
     session["prediction_id"] = history.id
 
     session["new_prediction"] = True
