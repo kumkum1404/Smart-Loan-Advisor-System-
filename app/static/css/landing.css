@@ -533,77 +533,97 @@ body{
 
 @media (max-width:768px){
 
-.hero-section{
+.home-logo{
+    width:150px;
+    height:150px;
+    margin:20px auto;
+}
 
-    padding:18px 18px 35px;
-    text-align:center;
+.home-logo i{
+    font-size:65px;
+}
+
+.home-text{
+    margin-top:15px !important;
+}
+
+.home-text h2{
+    font-size:28px;
+}
+
+.hero-stats{
+
+display:flex;
+
+overflow-x:auto;
+
+gap:15px;
+
+padding-bottom:10px;
+
+scrollbar-width:none;
 
 }
 
-.hero-title{
+.hero-stats::-webkit-scrollbar{
+display:none;
+}
 
-    font-size:30px;
-    line-height:1.2;
-    margin-top:12px;
+.stat-box{
+
+min-width:160px;
+
+flex:none;
 
 }
 
-.hero-subtitle{
+.hero{
 
-    font-size:15px;
-    margin-top:10px;
+padding-top:90px;
 
-}
-
-.stats-container{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:12px;
-
-margin-top:22px;
+padding-bottom:40px;
 
 }
 
-.stat-card{
+.hero h1{
 
-width:100%;
+font-size:32px;
 
-margin:0;
-
-padding:18px;
+line-height:1.2;
 
 }
 
+.hero-text{
 
-.hero-circle{
-
-width:150px;
-height:150px;
-
-margin:18px auto;
-
-}
-
-.hero-circle i{
-
-font-size:65px;
+font-size:15px;
 
 }
 
 .feature-card{
 
-padding:18px;
+padding:22px;
 
-border-radius:16px;
+}
+
+.feature-circle{
+
+width:60px;
+
+height:60px;
+
+margin:auto;
+
+}
+
+.feature-circle i{
+
+font-size:26px;
 
 }
 
 .feature-card h4{
 
-font-size:17px;
+font-size:20px;
 
 }
 
@@ -613,14 +633,21 @@ font-size:14px;
 
 }
 
-.workflow-card{
+.step-card{
 
-padding:18px;
-
-min-height:auto;
+padding:25px;
 
 }
 
+.step-number{
+
+width:45px;
+
+height:45px;
+
+font-size:20px;
+
+}
 
 .accordion-button{
 
@@ -630,30 +657,45 @@ padding:15px;
 
 }
 
-.cta-section{
+.accordion-body{
 
-padding:35px 20px;
-
-text-align:center;
-
-}
-
-.cta-section h2{
-
-font-size:28px;
+font-size:14px;
 
 }
 
 
 .footer{
 
-padding:40px 20px;
+text-align:center;
 
 }
 
-.footer .row{
+.footer .col-lg-2{
 
-text-align:center;
+margin-top:25px;
+
+}
+
+.social-icons{
+
+justify-content:center;
+
+display:flex;
+
+gap:15px;
+
+}
+
+
+.navbar-brand{
+
+font-size:22px !important;
+
+}
+
+.navbar{
+
+padding:12px 0;
 
 }
 
