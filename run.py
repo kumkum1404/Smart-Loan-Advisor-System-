@@ -290,16 +290,16 @@ def register():
                 url_for("register")
             )
 
-        if not terms:
+        # if not terms:
 
-            flash(
-                "Please accept the Terms of Service.",
-                "danger"
-            )
+        #     flash(
+        #         "Please accept the Terms of Service.",
+        #         "danger"
+        #     )
 
-            return redirect(
-                url_for("register")
-            )
+        #     return redirect(
+        #         url_for("register")
+        #     )
 
         # -------------------------------
         # Check existing user
