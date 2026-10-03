@@ -48,8 +48,7 @@ def login():
         user = User.query.filter_by(email=email).first()
 
         # Check password
-        if user and bcrypt.check_password_hash(
-            user.password,
+        if user and user.check_password(
             password
         ):
 
