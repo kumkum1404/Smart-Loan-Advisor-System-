@@ -25,69 +25,328 @@ bcrypt = Bcrypt(app)
 def home():
     return render_template("landing.html")
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
+@app.route("/login", methods=["GET", "POST"])
+def login():
+
+    if current_user.is_authenticated:
+        return redirect(url_for("dashboard"))
 
     if request.method == "POST":
 
-        full_name = request.form.get("full_name")
-        email = request.form.get("email")
-        password = request.form.get("password")
+        email = request.form.get("email", "").strip().lower()
+        password = request.form.get("password", "")
 
-        # Email already exists?
-        existing_user = User.query.filter_by(email=email).first()
+        # Empty fields
+        if not email or not password:
+            flash(
+                "Please enter your email and password.",
+                "danger"
+            )
+            return redirect(url_for("login"))
+
+        # Find user
+        user = User.query.filter_by(email=email).first()
+
+        # Check password
+        if user and bcrypt.check_password_hash(
+            user.password,
+            password
+        ):
+
+            login_user(user)
+
+            flash(
+                "Login successful!",
+                "success"
+            )
+
+            return redirect(
+                url_for("dashboard")
+            )
+
+        # Wrong email/password
+        flash(
+            "Invalid email or password.",
+            "danger"
+        )
+
+        return redirect(
+            url_for("login")
+        )
+
+    return render_template(
+        "auth/login.html"
+    )
+
+
+@app.route("/forgot-password", methods=["GET", "POST"])
+def forgot_password():
+
+    if current_user.is_authenticated:
+        return redirect(url_for("dashboard"))
+
+    if request.method == "POST":
+
+        email = request.form.get(
+            "email",
+            ""
+        ).strip().lower()
+
+        if not email:
+            flash(
+                "Please enter your email address.",
+                "danger"
+            )
+            return redirect(
+                url_for("forgot_password")
+            )
+
+        user = User.query.filter_by(
+            email=email
+        ).first()
+
+        if not user:
+            flash(
+                "No account found with this email address.",
+                "danger"
+            )
+            return redirect(
+                url_for("forgot_password")
+            )
+
+        return redirect(
+            url_for(
+                "reset_password",
+                email=email
+            )
+        )
+
+    return render_template(
+        "auth/forgot_password.html"
+    ) 
+
+
+@app.route(
+    "/reset-password/<email>",
+    methods=["GET", "POST"]
+)
+def reset_password(email):
+
+    if current_user.is_authenticated:
+        return redirect(url_for("dashboard"))
+
+    user = User.query.filter_by(
+        email=email.lower()
+    ).first()
+
+    if not user:
+
+        flash(
+            "Invalid password reset request.",
+            "danger"
+        )
+
+        return redirect(
+            url_for("forgot_password")
+        )
+
+    if request.method == "POST":
+
+        password = request.form.get(
+            "password",
+            ""
+        )
+
+        confirm_password = request.form.get(
+            "confirm_password",
+            ""
+        )
+
+        if len(password) < 8:
+
+            flash(
+                "Password must contain at least 8 characters.",
+                "danger"
+            )
+
+            return redirect(
+                url_for(
+                    "reset_password",
+                    email=email
+                )
+            )
+
+        if password != confirm_password:
+
+            flash(
+                "Passwords do not match.",
+                "danger"
+            )
+
+            return redirect(
+                url_for(
+                    "reset_password",
+                    email=email
+                )
+            )
+
+        # Update password
+        user.password = bcrypt.generate_password_hash(
+            password
+        ).decode("utf-8")
+
+        db.session.commit()
+
+        flash(
+            "Password reset successfully. Please sign in.",
+            "success"
+        )
+
+        return redirect(
+            url_for("login")
+        )
+
+    return render_template(
+        "auth/reset_password.html",
+        email=email
+    )
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+
+    if current_user.is_authenticated:
+        return redirect(url_for("dashboard"))
+
+    if request.method == "POST":
+
+        full_name = request.form.get(
+            "full_name",
+            ""
+        ).strip()
+
+        email = request.form.get(
+            "email",
+            ""
+        ).strip().lower()
+
+        password = request.form.get(
+            "password",
+            ""
+        )
+
+        confirm_password = request.form.get(
+            "confirm_password",
+            ""
+        )
+
+        terms = request.form.get("terms")
+
+        # -------------------------------
+        # Validation
+        # -------------------------------
+
+        if not full_name:
+
+            flash(
+                "Please enter your full name.",
+                "danger"
+            )
+
+            return redirect(
+                url_for("register")
+            )
+
+        if not email:
+
+            flash(
+                "Please enter your email.",
+                "danger"
+            )
+
+            return redirect(
+                url_for("register")
+            )
+
+        if len(password) < 8:
+
+            flash(
+                "Password must contain at least 8 characters.",
+                "danger"
+            )
+
+            return redirect(
+                url_for("register")
+            )
+
+        if password != confirm_password:
+
+            flash(
+                "Passwords do not match.",
+                "danger"
+            )
+
+            return redirect(
+                url_for("register")
+            )
+
+        if not terms:
+
+            flash(
+                "Please accept the Terms of Service.",
+                "danger"
+            )
+
+            return redirect(
+                url_for("register")
+            )
+
+        # -------------------------------
+        # Check existing user
+        # -------------------------------
+
+        existing_user = User.query.filter_by(
+            email=email
+        ).first()
 
         if existing_user:
 
-            flash("Email already registered!", "danger")
-            return redirect(url_for("register"))
+            flash(
+                "An account with this email already exists. Please sign in.",
+                "warning"
+            )
 
-        hashed_password = bcrypt.generate_password_hash(password).decode("utf-8")
+            return redirect(
+                url_for("login")
+            )
+
+        # -------------------------------
+        # Create user
+        # -------------------------------
 
         user = User(
             full_name=full_name,
             email=email,
-            password=hashed_password
+            role="user"
         )
+
+        user.set_password(password)
 
         db.session.add(user)
         db.session.commit()
 
-        flash("Registration Successful!", "success")
+        flash(
+            "Account created successfully! Please sign in.",
+            "success"
+        )
 
-        return redirect(url_for("login"))
+        return redirect(
+            url_for("login")
+        )
 
-    return render_template("auth/register.html")
-
-@app.route("/login", methods=["GET", "POST"])
-def login():
-
-    if request.method == "POST":
-
-        email = request.form.get("email")
-        password = request.form.get("password")
-
-        print("Entered Email:", email)
-
-        user = User.query.filter_by(email=email).first()
-
-        print("User Found:", user)
-
-        if user:
-            print("Password Match:", bcrypt.check_password_hash(user.password, password))
-
-        if user and bcrypt.check_password_hash(user.password, password):
-
-            login_user(user)
-
-            flash("Login Successful!", "success")
-
-            return redirect(url_for("dashboard"))
-
-        flash("Invalid Email or Password", "danger")
-
-    return render_template("auth/login.html")
-    
+    return render_template(
+        "auth/register.html"
+    )
 
 @app.route("/logout")
 @login_required
@@ -95,9 +354,15 @@ def logout():
 
     logout_user()
 
-    flash("Logged Out Successfully", "success")
+    flash(
+        "You have been logged out successfully.",
+        "success"
+    )
 
-    return redirect(url_for("home"))
+    return redirect(
+        url_for("login")
+    )
+
 
 @app.route("/delete_account", methods=["POST"])
 @login_required

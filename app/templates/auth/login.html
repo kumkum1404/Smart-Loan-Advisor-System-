@@ -1,65 +1,270 @@
 {% extends "base.html" %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Login | LoanSense AI{% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/auth.css') }}">
 {% endblock %}
 
 {% block content %}
 
-<div class="auth-container">
+<div class="auth-page">
 
-    <div class="auth-card">
+    <!-- LEFT BRAND -->
+    <section class="auth-brand">
+        <div class="brand-content">
 
-        <h2>Welcome Back</h2>
+            <div class="brand-logo">
+                <div class="logo-icon">
+                    <i class="bi bi-bank2"></i>
+                </div>
+                <span>LoanSense <strong>AI</strong></span>
+            </div>
 
-        <p>Login to continue.</p>
+            <div class="brand-heading">
 
-        <!-- Flash Messages -->
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="alert alert-{{ category }}">
-                        {{ message }}
+                <span class="small-label">
+                    SMART FINANCIAL PLANNING
+                </span>
+
+                <h1>
+                    Plan Smarter.<br>
+                    <span>Borrow Better.</span>
+                </h1>
+
+                <p>
+                    Make informed loan decisions with AI-powered
+                    financial analysis, EMI planning and eligibility
+                    insights.
+                </p>
+
+            </div>
+
+            <div class="feature-list">
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
                     </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
 
-        <form method="POST" action="{{ url_for('login') }}">
+                    <div>
+                        <h6>AI-Powered Analysis</h6>
+                        <p>Understand your financial health.</p>
+                    </div>
+                </div>
 
-            <div class="mb-3">
-                <label>Email</label>
-                <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    required>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-calculator"></i>
+                    </div>
+
+                    <div>
+                        <h6>Smart Loan Planning</h6>
+                        <p>Calculate EMI and affordability.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <div>
+                        <h6>Secure & Private</h6>
+                        <p>Your financial information stays protected.</p>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="mb-3">
-                <label>Password</label>
-                <input
-                    type="password"
-                    class="form-control"
-                    name="password"
-                    required>
+        </div>
+    </section>
+
+
+    <!-- RIGHT LOGIN -->
+    <section class="auth-section">
+
+        <div class="auth-card">
+
+            <div class="mobile-logo">
+                <div class="logo-icon">
+                    <i class="bi bi-bank2"></i>
+                </div>
+                <span>LoanSense <strong>AI</strong></span>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">
-                Login
-            </button>
+            <div class="auth-header">
 
-        </form>
+                <div class="auth-icon">
+                    <i class="bi bi-person"></i>
+                </div>
 
-        <p class="mt-3 text-center">
-            Don't have an account?
-            <a href="{{ url_for('register') }}">Register</a>
-        </p>
+                <h2>Welcome Back</h2>
 
-    </div>
+                <p>
+                    Sign in to continue to your dashboard
+                </p>
+
+            </div>
+
+
+            <!-- FLASH -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="auth-alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+
+            <form method="POST"
+                  action="{{ url_for('login') }}"
+                  class="auth-form">
+
+                <div class="form-group">
+
+                    <label>Email Address</label>
+
+                    <div class="input-wrapper">
+
+                        <i class="bi bi-envelope"></i>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <div class="password-label">
+
+                        <label>Password</label>
+
+                        <a href="{{ url_for('forgot_password') }}">
+                            Forgot Password?
+                        </a>
+
+                    </div>
+
+                    <div class="input-wrapper">
+
+                        <i class="bi bi-lock"></i>
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            onclick="togglePassword(
+                                'loginPassword',
+                                'loginEye'
+                            )">
+
+                            <i
+                                id="loginEye"
+                                class="bi bi-eye">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="remember-row">
+
+                    <label>
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+
+                </div>
+
+
+                <button type="submit" class="auth-btn">
+
+                    Sign In
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <div class="switch-auth">
+
+                <span>Don't have an account?</span>
+
+                <a href="{{ url_for('register') }}">
+                    Create Account
+                </a>
+
+            </div>
+
+
+            <div class="security-note">
+
+                <i class="bi bi-shield-check"></i>
+
+                Secure login protected by encryption
+
+            </div>
+
+        </div>
+
+    </section>
 
 </div>
+
+{% endblock %}
+
+
+{% block js %}
+
+<script>
+
+function togglePassword(inputId, iconId) {
+
+    const input = document.getElementById(inputId);
+    const icon = document.getElementById(iconId);
+
+    if (input.type === "password") {
+
+        input.type = "text";
+
+        icon.classList.remove("bi-eye");
+        icon.classList.add("bi-eye-slash");
+
+    } else {
+
+        input.type = "password";
+
+        icon.classList.remove("bi-eye-slash");
+        icon.classList.add("bi-eye");
+
+    }
+
+}
+
+</script>
 
 {% endblock %}
